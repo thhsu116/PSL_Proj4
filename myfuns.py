@@ -29,7 +29,7 @@ genres = ['Action', 'Adventure', 'Animation', "Children's", "Comedy",  "Crime",
 
 genre_top10 = pd.read_csv('genre_top10.csv', index_col=0)
 
-cos_similarity_matrix = None#pd.read_csv('cos_similarity_matrix.csv', index_col=0)
+cos_similarity_matrix = pd.read_csv('cos_similarity_matrix_sorted.csv', index_col=0)
 
 
 def get_displayed_movies():
@@ -73,8 +73,8 @@ def myIBCF(S, user_data):
 
     # for each row, keep top 30 and set the rest to NA
     S = S.to_numpy()
-    for i in range(3706):
-        S[i, (np.nan_to_num(S[i, :])).argsort()[:3676]] = np.nan
+    #for i in range(3706):
+        #S[i, (np.nan_to_num(S[i, :])).argsort()[:3676]] = np.nan
 
     pred = np.array([0.0] * 3706)
     user = np.nan_to_num(user_data)
