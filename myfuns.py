@@ -29,7 +29,7 @@ genres = ['Action', 'Adventure', 'Animation', "Children's", "Comedy",  "Crime",
 
 genre_top10 = pd.read_csv('genre_top10.csv', index_col=0)
 
-cos_similarity_matrix = pd.read_csv('cos_similarity_matrix.csv', index_col=0)
+cos_similarity_matrix = None#pd.read_csv('cos_similarity_matrix.csv', index_col=0)
 
 
 def get_displayed_movies():
